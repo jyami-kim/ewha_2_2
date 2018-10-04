@@ -99,7 +99,7 @@ m[i][j] = (double**)malloc(sizeof(double)*z); 로 메모리 할당을 해준다.
 
 ## IO condition
 
-### io_homework 2_1 
+### <a id="io_homework2_1"></a>io_homework 2_1
 
 N*M크기의 sparse matrix의 element를 입력받은후, 이를 transpose matrix로 구현하세요.
 
@@ -167,8 +167,7 @@ Matrix B^T
 
 0 8 0 0 1 0
 
-### io_homework 2_2
-[create an anchor](#io_homework2_2)
+### <a id="io_homework2_2"></a>io_homework 2_2
 
 x*y*z를 갖는 3차원 배열 A B C에 메모리를 할당하고, A+B의 값을 C에 저장하시오. (입력은 받지 않습니다.)
 
