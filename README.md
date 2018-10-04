@@ -3,7 +3,7 @@
 
 ## Homework 2_1
 
-[io 조건 확인]()
+[io 조건 확인](#io_homework2_1)
 
 ### ㄱ.struct 정리
 struct(구조체) : 정의만 해서는 사용할 수 없다, 변수로 선언해서 사용한다. 
@@ -52,7 +52,7 @@ typedef를 사용하면 구조체 변수를 선언할 때 일일이 struct 키�
 ## Homework 2_2
 
 
-[io 조건 확인]()
+[io 조건 확인](#io_homework2_2)
 
 ### ㄱ. 메모리할당 정리
 ![pointer](https://user-images.githubusercontent.com/26458200/46453047-3ae9d100-c7da-11e8-8362-3e915236c8d2.PNG)
@@ -96,3 +96,242 @@ m[i][j] = (double**)malloc(sizeof(double)*z); 로 메모리 할당을 해준다.
 
 결국 변수 m은 메모리가 할당되지 않은 상태, 즉 아무것도 가리키지 않는 NULL포인터로 만들어야 하므로 m=NULL; 을 마지막줄에 넣어준다.
 
+
+## IO condition
+
+### io_homework 2_1 
+
+N*M크기의 sparse matrix의 element를 입력받은후, 이를 transpose matrix로 구현하세요.
+
+첫째 줄에 Matrix의 row의 크기인 N값을 입력받습니다.
+
+둘째 줄에 Matrix의 column의 크기인 M값을 입력받습니다.
+
+셋째 줄에는 sparse matrix의 element수를 입력받습니다.
+
+이후에는 sparse matrix의 element 수만큼 (row col element value) 형식의 입력을 반복합니다.
+
+입력이 다 끝난 후, 출력은 dense matrix의 형식으로
+
+입력받은 sparse matrix와 transpose operation이 이루어진 matrix 두개를 출력합니다.
+
+- 예제 입력
+
+Input row size: 6
+
+Input col size: 6
+
+Input terms(maximum is 10): 7
+
+Input numbers by format row col value : 0 3 7
+
+Input numbers by format row col value : 1 0 9
+
+Input numbers by format row col value : 1 5 8
+
+Input numbers by format row col value : 3 0 6
+
+Input numbers by format row col value : 3 1 5
+
+Input numbers by format row col value : 4 5 1
+
+Input numbers by format row col value : 5 2 2
+
+- 예제 출력
+
+Matrix B
+
+0 0 0 7 0 0
+
+9 0 0 0 0 8
+
+0 0 0 0 0 0
+
+6 5 0 0 0 0
+
+0 0 0 0 0 1
+
+0 0 2 0 0 0
+
+Matrix B^T
+
+0 9 0 6 0 0
+
+0 0 0 5 0 0
+
+0 0 0 0 0 2
+
+7 0 0 0 0 0
+
+0 0 0 0 0 0
+
+0 8 0 0 1 0
+
+### io_homework 2_2
+[create an anchor](#io_homework2_2)
+
+x*y*z를 갖는 3차원 배열 A B C에 메모리를 할당하고, A+B의 값을 C에 저장하시오. (입력은 받지 않습니다.)
+
+1. x,y,z는 입력받는다 format = x y z
+
+2. 3차원 배열 A B C의 요소의 타입은 double으로 지정
+
+3. A와 B 배열의 각 요소의 값은 입력받는다.
+
+4. 이후A와 B 배열의 addtion operation을 한 결과를 C에 저장
+
+5. A와 B의 메모리 공간을 해제
+
+- 예제입력
+
+input x, y, z (format = x y z): 2 3 4
+
+Matrix A
+
+matrix[0][0][0] = 1
+
+matrix[0][0][1] = 2
+
+matrix[0][0][2] = 3
+
+matrix[0][0][3] = 4
+
+matrix[0][1][0] = 5
+
+matrix[0][1][1] = 6
+
+matrix[0][1][2] = 7
+
+matrix[0][1][3] = 8
+
+matrix[0][2][0] = 9
+
+matrix[0][2][1] = 10
+
+matrix[0][2][2] = 11
+
+matrix[0][2][3] = 12
+
+matrix[1][0][0] = 13
+
+matrix[1][0][1] = 14
+
+matrix[1][0][2] = 15
+
+matrix[1][0][3] = 16
+
+matrix[1][1][0] = 17
+
+matrix[1][1][1] = 18
+
+matrix[1][1][2] = 19
+
+matrix[1][1][3] = 20
+
+matrix[1][2][0] = 21
+
+matrix[1][2][1] = 22
+
+matrix[1][2][2] = 23
+
+matrix[1][2][3] = 24
+
+Matrix B
+
+matrix[0][0][0] = 1
+
+matrix[0][0][1] = 1
+
+matrix[0][0][2] = 1
+
+matrix[0][0][3] = 1
+
+matrix[0][1][0] = 1
+
+matrix[0][1][1] = 1
+
+matrix[0][1][2] = 1
+
+matrix[0][1][3] = 1
+
+matrix[0][2][0] = 1
+
+matrix[0][2][1] = 1
+
+matrix[0][2][2] = 1
+
+matrix[0][2][3] = 1
+
+matrix[1][0][0] = 1
+
+matrix[1][0][1] = 1
+
+matrix[1][0][2] = 1
+
+matrix[1][0][3] = 1
+
+matrix[1][1][0] = 1
+
+matrix[1][1][1] = 1
+
+matrix[1][1][2] = 1
+
+matrix[1][1][3] = 1
+
+matrix[1][2][0] = 1
+
+matrix[1][2][1] = 1
+
+matrix[1][2][2] = 1
+
+matrix[1][2][3] = 1
+
+- 예제출력
+
+matrix[0][0][0] = 2.000000
+
+matrix[0][0][1] = 3.000000
+
+matrix[0][0][2] = 4.000000
+
+matrix[0][0][3] = 5.000000
+
+matrix[0][1][0] = 6.000000
+
+matrix[0][1][1] = 7.000000
+
+matrix[0][1][2] = 8.000000
+
+matrix[0][1][3] = 9.000000
+
+matrix[0][2][0] = 10.000000
+
+matrix[0][2][1] = 11.000000
+
+matrix[0][2][2] = 12.000000
+
+matrix[0][2][3] = 13.000000
+
+matrix[1][0][0] = 14.000000
+
+matrix[1][0][1] = 15.000000
+
+matrix[1][0][2] = 16.000000
+
+matrix[1][0][3] = 17.000000
+
+matrix[1][1][0] = 18.000000
+
+matrix[1][1][1] = 19.000000
+
+matrix[1][1][2] = 20.000000
+
+matrix[1][1][3] = 21.000000
+
+matrix[1][2][0] = 22.000000
+
+matrix[1][2][1] = 23.000000
+
+matrix[1][2][2] = 24.000000
+
+matrix[1][2][3] = 25.000000
