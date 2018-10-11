@@ -113,56 +113,34 @@ N*M크기의 sparse matrix의 element를 입력받은후, 이를 transpose matri
 입력받은 sparse matrix와 transpose operation이 이루어진 matrix 두개를 출력합니다.
 
 - 예제 입력
-
+<pre><code>
 Input row size: 6
-
 Input col size: 6
-
 Input terms(maximum is 10): 7
-
 Input numbers by format row col value : 0 3 7
-
 Input numbers by format row col value : 1 0 9
-
 Input numbers by format row col value : 1 5 8
-
 Input numbers by format row col value : 3 0 6
-
 Input numbers by format row col value : 3 1 5
-
 Input numbers by format row col value : 4 5 1
-
-Input numbers by format row col value : 5 2 2
+Input numbers by format row col value : 5 2 2</pre></code>
 
 - 예제 출력
-
-Matrix B
-
+<pre><code>Matrix B
 0 0 0 7 0 0
-
 9 0 0 0 0 8
-
 0 0 0 0 0 0
-
 6 5 0 0 0 0
-
 0 0 0 0 0 1
-
 0 0 2 0 0 0
 
 Matrix B^T
-
 0 9 0 6 0 0
-
 0 0 0 5 0 0
-
 0 0 0 0 0 2
-
 7 0 0 0 0 0
-
 0 0 0 0 0 0
-
-0 8 0 0 1 0
+0 8 0 0 1 0</pre></code>
 
 ### <a id="io_homework2_2"></a>io_homework 2_2
 
@@ -179,155 +157,82 @@ x*y*z를 갖는 3차원 배열 A B C에 메모리를 할당하고, A+B의 값을
 5. A와 B의 메모리 공간을 해제
 
 - 예제입력
-
-input x, y, z (format = x y z): 2 3 4
-
+<pre><code>input x, y, z (format = x y z): 2 3 4
 Matrix A
-
 matrix[0][0][0] = 1
-
 matrix[0][0][1] = 2
-
 matrix[0][0][2] = 3
-
 matrix[0][0][3] = 4
-
 matrix[0][1][0] = 5
-
 matrix[0][1][1] = 6
-
 matrix[0][1][2] = 7
-
 matrix[0][1][3] = 8
-
 matrix[0][2][0] = 9
-
 matrix[0][2][1] = 10
-
 matrix[0][2][2] = 11
-
 matrix[0][2][3] = 12
-
 matrix[1][0][0] = 13
-
 matrix[1][0][1] = 14
-
 matrix[1][0][2] = 15
-
 matrix[1][0][3] = 16
-
 matrix[1][1][0] = 17
-
 matrix[1][1][1] = 18
-
 matrix[1][1][2] = 19
-
 matrix[1][1][3] = 20
-
 matrix[1][2][0] = 21
-
 matrix[1][2][1] = 22
-
 matrix[1][2][2] = 23
-
 matrix[1][2][3] = 24
 
 Matrix B
-
 matrix[0][0][0] = 1
-
 matrix[0][0][1] = 1
-
 matrix[0][0][2] = 1
-
 matrix[0][0][3] = 1
-
 matrix[0][1][0] = 1
-
 matrix[0][1][1] = 1
-
 matrix[0][1][2] = 1
-
 matrix[0][1][3] = 1
-
 matrix[0][2][0] = 1
-
 matrix[0][2][1] = 1
-
 matrix[0][2][2] = 1
-
 matrix[0][2][3] = 1
-
 matrix[1][0][0] = 1
-
 matrix[1][0][1] = 1
-
 matrix[1][0][2] = 1
-
 matrix[1][0][3] = 1
-
 matrix[1][1][0] = 1
-
 matrix[1][1][1] = 1
-
 matrix[1][1][2] = 1
-
 matrix[1][1][3] = 1
-
 matrix[1][2][0] = 1
-
 matrix[1][2][1] = 1
-
 matrix[1][2][2] = 1
-
 matrix[1][2][3] = 1
-
+</pre></code>
 - 예제출력
-
-matrix[0][0][0] = 2.000000
-
+<pre><code>matrix[0][0][0] = 2.000000
 matrix[0][0][1] = 3.000000
-
 matrix[0][0][2] = 4.000000
-
 matrix[0][0][3] = 5.000000
-
 matrix[0][1][0] = 6.000000
-
 matrix[0][1][1] = 7.000000
-
 matrix[0][1][2] = 8.000000
-
 matrix[0][1][3] = 9.000000
-
 matrix[0][2][0] = 10.000000
-
 matrix[0][2][1] = 11.000000
-
 matrix[0][2][2] = 12.000000
-
 matrix[0][2][3] = 13.000000
-
 matrix[1][0][0] = 14.000000
-
 matrix[1][0][1] = 15.000000
-
 matrix[1][0][2] = 16.000000
-
 matrix[1][0][3] = 17.000000
-
 matrix[1][1][0] = 18.000000
-
 matrix[1][1][1] = 19.000000
-
 matrix[1][1][2] = 20.000000
-
 matrix[1][1][3] = 21.000000
-
 matrix[1][2][0] = 22.000000
-
 matrix[1][2][1] = 23.000000
-
 matrix[1][2][2] = 24.000000
-
 matrix[1][2][3] = 25.000000
+</pre></code>
