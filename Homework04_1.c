@@ -18,13 +18,10 @@ typedef struct {
 }LinkedStackType;
 
 
-
-
 void init(LinkedStackType *s)
 {
 	s->top = NULL;
 }
-
 
 int is_empty(LinkedStackType *s)
 {
@@ -71,10 +68,10 @@ element pop(LinkedStackType *s)
 			s->top = NULL;
 		}
 		else {
-			s->top->llink->rlink = s->top->rlink;
-			s->top->rlink->llink = s->top->llink;
+			temp->llink->rlink = temp->rlink;
+			temp->rlink->llink = temp->llink;
 
-			s->top = s->top->llink;
+			s->top = temp->llink;
 		}
 		free(temp);
 		return item;

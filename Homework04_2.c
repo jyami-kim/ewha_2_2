@@ -86,34 +86,19 @@ void insert_customer(int arrival_time)
 }
 
 // Retrieve the customer waiting in the queue and return the customer's service time.
-int remove_customer1()
+int remove_customer(int i)
 {
 	element customer;
-	int service_time1 = 0;
+	int service_time = 0;
 
 	if (is_empty(&queue)) return 0;
 	customer = dequeue(&queue);
-	service_time1 = customer.service_time - 1;
+	service_time = customer.service_time - 1;
 	served_customers++;
 	waited_time += clock - customer.arrival_time;
-	printf("Customer %d starts service in %d minutes. Wait time was %d minutes.In 1st\n", customer.id, clock, clock - customer.arrival_time);
-	return service_time1;
+	printf("Customer %d starts service in %d minutes. Wait time was %d minutes. In bank_staff %d\n", customer.id, clock, clock - customer.arrival_time, i);
+	return service_time;
 }
-
-int remove_customer2()
-{
-	element customer;
-	int service_time2 = 0;
-
-	if (is_empty(&queue)) return 0;
-	customer = dequeue(&queue);
-	service_time2 = customer.service_time - 1;
-	served_customers++;
-	waited_time += clock - customer.arrival_time;
-	printf("Customer %d starts service in %d minutes. Wait time was %d minutes. In 2th\n", customer.id, clock, clock - customer.arrival_time);
-	return service_time2;
-}
-
 
 // Print the statistics.
 void print_stat()
@@ -129,8 +114,7 @@ void print_stat()
 // Simulation program
 void main()
 {
-	int service_time1 = 0;
-	int service_time2 = 0;
+	int service_time[] = { 0,0 };
 
 	clock = 0;
 	while (clock < duration) {
@@ -140,19 +124,15 @@ void main()
 			insert_customer(clock);
 		}
 
-
-		if (service_time1 > 0)	
-			service_time1--;
-		else {
-			service_time1 = remove_customer1();
-		}
-
-		if (service_time2 > 0)	
-			service_time2--;
-		else {
-			service_time2 = remove_customer2();
+		for (int i = 0; i < 2; i++) {
+			if (service_time[0] > 0)
+				service_time[0]--;
+			else {
+				service_time[0] = remove_customer(i+1);
+			}
 		}
 	}
+	printf("====result====\n");
 	print_stat();
 }
 

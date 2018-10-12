@@ -20,6 +20,7 @@ typedef struct QueueType {
 	element  queue[MAX_QUEUE_SIZE];
 	int  front, rear;
 } QueueType;
+
 QueueType queue;
 
 // Real random number generation function between 0 and 1
@@ -70,6 +71,7 @@ element dequeue(QueueType * q)
 // If it is smaller than arrival_prov, assume that new customer comes in the bank.
 int is_customer_arrived()
 {
+
 	if (random() <arrival_prob)
 		return true;
 	else return false;
@@ -87,18 +89,18 @@ void insert_customer(int arrival_time)
 }
 
 // Retrieve the customer waiting in the queue and return the customer's service time.
-int remove_customer(int i, int* service_time)
+int remove_customer(int i)
 {
 	element customer;
-	service_time[i] = 0;
+	int service_time = 0;
 
 	if (is_empty(&queue)) return 0;
 	customer = dequeue(&queue);
-	service_time[i] = customer.service_time - 1;
+	service_time = customer.service_time - 1;
 	served_customers++;
 	waited_time += clock - customer.arrival_time;
 	printf("Customer %d starts service in %d minutes. Wait time was %d minutes. In %d bank_staff\n", customer.id, clock, clock - customer.arrival_time, i);
-	return service_time[i];
+	return service_time;
 }
 
 // Print the statistics.
@@ -120,7 +122,7 @@ void main()
 	printf("input the number of bank_staffs: ");
 	scanf_s("%d", &bank_staffs_number);
 	printf("input the average number of customers arriving in one time unit (0.0 ~ 1.0): ");
-	scanf_s("%f", &arrival_prob);
+	scanf_s("%lf", &arrival_prob);
 	printf("input the simulation duration: ");
 	scanf_s("%d", &duration);
 	printf("input the max serve time: ");
@@ -140,7 +142,7 @@ void main()
 			if (service_time[i] > 0)
 				service_time[i]--;
 			else
-				service_time[i] = remove_customer(i, service_time);
+				service_time[i] = remove_customer(i+1);
 		}
 	}
 	printf("=====result=====\n");
