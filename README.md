@@ -1,5 +1,12 @@
-# DataStructure
+# Ewha_2_2
+### Data Structure
+
 2학년 2학기 자료구조 과제 정리
-- Array_pointer : [Homework 2](https://github.com/mjung1798/DataStructure/blob/master/ReadMe_HW2.md)
-- Linked_list : [Homework 3](https://github.com/mjung1798/DataStructure/blob/master/Readme_HW3.md)
-- priority_queue : [Homework 6](https://github.com/mjung1798/DataStructure/blob/master/Readme_HW6.md)
+
+- Array_pointer : [Homework 2]
+- Linked_list : [Homework 3]
+- priority_queue : [Homework 6]
+
+### JAVA Programming And Labs
+
+2학년 2학기 자바 프로그래밍 실습, 과제 정리
